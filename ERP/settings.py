@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     
     'GeneralSettings',
     'BusinessPartner',
+    'Financials',
+
 ]
 
 MIDDLEWARE = [
