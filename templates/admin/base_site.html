@@ -1,0 +1,41 @@
+{% extends "admin/base.html" %}
+{%load static%}
+{% load i18n %}
+
+{% block title %}
+  {% if title %}{{ title }} | {% endif %}
+  {% if not is_popup %}{% if not add and change and delete %}{% if "app_list" in request.resolver_match.url_name %}{% blocktrans with name=opts.verbose_name_plural count=1 %}{{ name }}{% endblocktrans %}{% else %}{{ name }}{% endif %}{% endif %}{% endif %}
+{% endblock %}
+
+
+{% block extrahead %}
+    {{ block.super }}
+
+    <link rel="stylesheet" href="{% static 'css/admin_styles.css' %}">   
+    <link rel="stylesheet" href="{% static 'css/w3.css' %}">
+    <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+
+    <style>
+        /* Hide the Recent actions section */
+        #content-related{
+            display: none;
+        }
+
+    </style>  
+
+    <script type="text/javascript" src="{% static 'js/custom_admin.js' %}" defer></script>
+
+{% endblock %}
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+        <img src="{% static 'images/logo.jpg' %}" alt="Rebel" width='70px'>
+        
+    </a>
+    
+</h1>
+<!-- <span>Reliable Element For Business Estsblishment And Logistics </span> -->
+{% endblock %}

@@ -1,0 +1,176 @@
+body{font-family: Roboto, sans-serif;}
+
+/* Admin Panel */
+#header{
+    background: rgb(2,0,36)     !important;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 75%) !important;
+    border: 1px solid darkslategray;
+}
+/* https://cssgradient.io/ */
+div.breadcrumbs {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 75%);
+}
+/* Change_Form.html */
+
+.btn-elegant{
+    cursor: pointer;
+    border-radius: 10em;
+    background-color: #2e2e2e!important;
+    color: #fff;
+}
+input[type=text], input[type=password], input[type=email], input[type=url], input[type=number], input[type=tel]  {
+    height: 20px !important;
+    width: auto !important;
+}
+
+textarea{height: 60px!important;}
+
+
+.original p {
+    display: none !important;
+}
+select {
+    height: 25px !important;
+}
+
+
+.related-widget-wrapper{
+    font-size: 10px !important;
+
+}
+
+
+td, th {
+    padding: 0px !important;
+}
+
+
+
+
+.form-group  label{
+    float: left !important;
+    width: 140px !important;
+}
+
+.help, p.help, form p.help, div.help, form div.help, div.help li {
+
+    display: none !important;
+}
+
+fieldset.module{
+    width: auto !important;
+    white-space: nowrap;
+    overflow-x: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+  
+}
+
+.card{
+    background-color: #ebebeb !important;
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+.card-header{
+ background: #d7d7d7 !important;
+
+}
+
+fieldset.module h2
+{
+    /* display: none  !important; */
+    background-color: #000;
+}
+
+.table > thead {
+    height: 33px !important;
+}
+/* Menu */
+.accordion {
+    
+    width: 330px !important;
+}
+
+
+/* Add your desired styling here */
+.field-lineNo {
+    position: relative;
+  }
+  
+  .icon {
+    position: absolute;
+    top: 50%; /* Adjust this value to vertically center the span */
+    right: 5px; /* Adjust this value to set the span's distance from the input */
+    transform: translateY(-50%); /* Vertically center the span */
+  }
+
+
+  /* Set a maximum height for the table container */
+#olee {
+    max-height: 150px !important; /* Adjust the height as per your requirement */
+    overflow-y: auto; /* Add a vertical scrollbar if needed */
+  }
+
+
+/* History button */
+
+
+  .object-tools li {
+
+    float: right !important;
+
+    margin-top: 15px !important;
+}
+
+
+.gradient-border {
+    --borderWidth: 6px;
+    background: #1d1f20;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+  .gradient-border:after {
+    content: "";
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+/* submit button */
+
+
+
+
+
+
+
+
+
