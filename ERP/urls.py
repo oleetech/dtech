@@ -28,6 +28,7 @@ class HomeView(TemplateView):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeView.as_view(), name='home'),  # Add the 'name' parameter for easy reference
+    path('Purchasing/',include("Purchasing.urls")),
 
 ]
 

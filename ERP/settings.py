@@ -41,6 +41,14 @@ INSTALLED_APPS = [
     'GeneralSettings',
     'BusinessPartner',
     'Financials',
+    'ItemMasterData',
+    'Purchasing',
+    'Sales',
+    'Production',
+    'HR',
+    'ProjectManagement'
+
+
 
 ]
 
