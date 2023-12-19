@@ -165,3 +165,17 @@ class LeaveRequestAdmin(admin.ModelAdmin):
     list_filter = ('status',)
     search_fields = ('employee__first_name', 'employee__last_name', 'start_date', 'end_date')
     form = LeaveRequestForm
+    
+from .models import Attendance    
+@admin.register(Attendance)
+class LeaveRequestAdmin(admin.ModelAdmin):  
+        list_display = ('date','intime', 'outtime', 'status')  
+        
+        
+        
+from .models import Task
+
+@admin.register(Task)
+class TaskAdmin(admin.ModelAdmin):
+    list_display = ('user', 'date', 'time_slot_1', 'time_slot_2', 'time_slot_3', 'time_slot_4')
+    search_fields = ('user__username', 'date')        

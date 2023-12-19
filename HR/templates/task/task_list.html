@@ -1,0 +1,18 @@
+<!-- templates/task/task_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+</head>
+<body>
+    <h1>Task List</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.date }} - {{ task.time_slot_1 }}, {{ task.time_slot_2 }}, {{ task.time_slot_3 }}, {{ task.time_slot_4 }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_task' %}">Add Task</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!-- templates/task/add_task.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+</head>
+<body>
+    <h1>Add Task</h1>
+    <form method="post" action="{% url 'add_task' %}">
+        {% csrf_token %}
+        <label for="time_slot_1">10-12:</label>
+        <input type="text" name="time_slot_1" required><br>
+
+        <label for="time_slot_2">12-2:</label>
+        <input type="text" name="time_slot_2" required><br>
+
+        <label for="time_slot_3">2-5:</label>
+        <input type="text" name="time_slot_3" required><br>
+
+        <label for="time_slot_4">5-7:</label>
+        <input type="text" name="time_slot_4" required><br>
+
+        <input type="submit" value="Add Task">
+    </form>
+    <a href="{% url 'task_list' %}">Back to Task List</a>
+</body>
+</html>

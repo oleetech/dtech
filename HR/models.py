@@ -240,3 +240,29 @@ class LeaveRequest(models.Model):
         super().save(*args, **kwargs)       
     class Meta:
         unique_together = ('start_date', 'end_date','employee')      
+        
+        
+        
+from django.contrib.auth.models import User
+
+class Attendance(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateField()
+    intime = models.TimeField(null=True, blank=True)
+    outtime = models.TimeField(null=True, blank=True)
+    status = models.CharField(max_length=1, choices=[('P', 'Present'), ('A', 'Absent')], default='P')
+    longitude = models.FloatField(null=True, blank=True)
+    latitude = models.FloatField(null=True, blank=True)        
+    
+    
+    
+class Task(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateField()
+    time_slot_1 = models.CharField(max_length=255, blank=True, null=True)
+    time_slot_2 = models.CharField(max_length=255, blank=True, null=True)
+    time_slot_3 = models.CharField(max_length=255, blank=True, null=True)
+    time_slot_4 = models.CharField(max_length=255, blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.date}"    
